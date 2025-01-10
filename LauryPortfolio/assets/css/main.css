@@ -558,35 +558,19 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 100px;
   font-weight: 700;
 }
 
 .hero p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 40px;
 }
 
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
-}
-
-.hero .social-links {
-  margin-top: 25px;
-}
-
-.hero .social-links a {
-  font-size: 20px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
-.hero .social-links a:hover {
-  color: var(--accent-color);
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
@@ -605,28 +589,13 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
+  padding: 70px;
 }
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: var(--accent-color);
-  line-height: 0;
+.about {
+  background-image: url("assets/img/backgroundDate.JPG");
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Centers the image within the element */
+  background-repeat: no-repeat;
 }
 
 /*--------------------------------------------------------------
@@ -712,8 +681,14 @@ section,
 .contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
-#title {
-  font-size: 70px;
+
+.carousel-item {
+  padding: 10px;
+  width: 75vw;
+  height: auto;
 }
-.carousel-inner {
+p {
+  padding: 20px;
+}
+#about {
 }
