@@ -559,12 +559,14 @@ section,
 .hero h2 {
   margin: 0;
   font-size: 100px;
-  font-weight: 700;
+  font-weight: 800;
+  color: #23000e;
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 40px;
+  font-weight: 700;
 }
 
 .hero p span {
@@ -596,6 +598,7 @@ section,
   background-size: cover; /* Ensures the image covers the element */
   background-position: center; /* Centers the image within the element */
   background-repeat: no-repeat;
+  color: #d39d55;
 }
 
 /*--------------------------------------------------------------
