@@ -677,9 +677,12 @@ section,
   background: color-mix(in srgb, var(--background-color), transparent 10%);
   /* Make the carousel fill the full screen height*/
 }
+.exhibition {
+  padding-bottom: 100px;
+}
 
 .carousel-item img {
-  padding-top: 100px;
+  padding-top: 0;
   object-fit: cover;
   height: 100vh;
   width: 100%;
@@ -695,8 +698,8 @@ p {
 }
 #description {
   color: #3b0019;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   padding-left: 0;
   font-size: 35px;
 }
