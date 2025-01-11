@@ -679,7 +679,7 @@ section,
 }
 
 .carousel-item img {
-  padding-top: 60px;
+  padding-top: 100px;
   object-fit: cover;
   height: 100vh;
   width: 100%;
@@ -695,8 +695,8 @@ p {
 }
 #description {
   color: #3b0019;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   padding-left: 0;
   font-size: 35px;
 }
