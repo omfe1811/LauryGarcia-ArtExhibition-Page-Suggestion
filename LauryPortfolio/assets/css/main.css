@@ -23,7 +23,7 @@
   --default-color: #1b001c; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #6b0000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #fff8e6; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #d6cfb4; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -31,17 +31,17 @@
 :root {
   --nav-color: #450202; /* The default color of the main navmenu links */
   --nav-hover-color: #450202; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #201a1c; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-mobile-background-color: #fff8e6; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #fff8e6; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #6b0000; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
+  --background-color: #fff8e6;
+  --surface-color: #fff8e6;
 }
 
 .dark-background {
@@ -152,9 +152,9 @@ h6 {
   bottom: 0;
   padding: 0 15px;
   transition: all ease-in-out 0.3s;
-  overflow-y: auto;
-  z-index: 997;
-  min-width: 200px;
+  overflow-y: hidden;
+  z-index: 1000;
+  background: transparent;
 }
 
 @media (max-width: 1199px) {
@@ -588,18 +588,6 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-  padding: 70px;
-}
-.about {
-  background-image: url("assets/img/backgroundDate.JPG");
-  background-size: cover; /* Ensures the image covers the element */
-  background-position: center; /* Centers the image within the element */
-  background-repeat: no-repeat;
-  color: #d39d55;
-}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -684,12 +672,24 @@ section,
 .contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
-
-.carousel-item {
-  padding: 10px;
-  width: 75vw;
-  height: auto;
+.carousel-inner {
+  height: 100vh;
+  background: color-mix(in srgb, var(--background-color), transparent 10%);
+  /* Make the carousel fill the full screen height*/
 }
+
+.carousel-item img {
+  padding-top: 60px;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+#carouselExampleSlidesOnly:before {
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
+}
+
 p {
   padding: 20px;
 }
@@ -698,6 +698,3 @@ p {
   padding: 90px;
   font-size: 35px;
 }
-/* overflow-clip-margin: content-box;
-    overflow: clip;
-} */
